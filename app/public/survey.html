@@ -177,7 +177,8 @@
             <button type="submit" class="btn btn-info btn-block btn-lg" id="submit">Find a friend!</button>
             <hr>
         </form>
-        <!-- Footer -->
+
+        <!-- Links to API friends list and github -->
         <footer class="footer" align="center">
             <div class="container">
                 <a href="/api/friends">API Friends List</a> |
@@ -221,9 +222,19 @@
         </footer>
     </div>
 
-
-
-
 </body>
 
 </html>
+
+
+
+<script type="text/javascript">
+
+    //In this code below we create the Front-end JavaScript which "POSTS" our form data to our express server.
+    // In essence, when the user hits submit, jQuery grabs all of the fields then sends a post request to our api.
+    // Our api recognizes the route (/api/friends)... and then runs the associated code (found in apiRoutes.js).
+    // In this case the associated code "saves" the data to the friends.js file
+
+
+
+</script>
