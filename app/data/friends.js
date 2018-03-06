@@ -4,8 +4,8 @@
 
 var userData = [
     {
-      "name": "John",
-      "photo": "",
+      "name": "Anish",
+      "photo": "https://avatars2.githubusercontent.com/u/18151398?s=400&u=abb84cdc0bf9f20543366395484bc72ec954dcc0&v=4",
       "scores":[
             5,
             1,
