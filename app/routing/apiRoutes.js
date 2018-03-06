@@ -41,7 +41,7 @@ module.exports = function (app) {
             userComparisonScore = calculateUserCompatibilityScore(newUserScores, existingUserScores);
 
             // build up array of user compatibility scores
-            friendCompatabilityScores.push(comparisonUserTotalScore);
+            friendCompatabilityScores.push(userComparisonScore);
 
         }
 
