@@ -74,7 +74,6 @@ module.exports = function (app) {
 }
 
 
-
 var totalDifference = 0;
 
 // find total difference between new user and another user
