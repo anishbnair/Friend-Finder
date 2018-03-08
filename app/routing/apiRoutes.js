@@ -14,7 +14,6 @@ module.exports = function (app) {
         res.json(userData);
     });
 
-
     var userComparisonScore = 0;
     var friendCompatabilityScores = [];
 
@@ -28,14 +27,12 @@ module.exports = function (app) {
 
         // store new user scores in an array 
         var newUserScores = req.body.scores;
-        console.log("New user scores: " + newUserScores);
 
         // loop through all userData and get scores of existing users for comparing the scores
         for (var i = 0; i < userData.length; i++) {
 
             // store exing scores of users in an array
             var existingUserScores = userData[i].scores;
-            console.log("Current user scores: " + existingUserScores);
 
             // find total difference between new user and each existing user
             userComparisonScore = calculateUserCompatibilityScore(newUserScores, existingUserScores);
@@ -45,15 +42,12 @@ module.exports = function (app) {
 
         }
 
-        console.log("Friend compatability scores: " + friendCompatabilityScores);
-
-
         var index = 0;
         var value = friendCompatabilityScores[0];
 
         // Get index of lowest score
         for (var i = 0; i < friendCompatabilityScores.length; i++) {
-            console.log("Value of item in array: " + friendCompatabilityScores[i]);
+
             if (friendCompatabilityScores[i] < value) {
                 value = friendCompatabilityScores[i];
                 index = i;
@@ -61,8 +55,6 @@ module.exports = function (app) {
         }
 
         // best compatable friend
-        console.log("Best friend name: " + userData[index].name);
-
         // Send best friend as a response to display in modal
         res.send(userData[index]);
 
@@ -86,8 +78,6 @@ function calculateUserCompatibilityScore(newUserScores, existingUserScores) {
 
         totalDifference += Math.abs(newUserScores[i] - existingUserScores[i]);
     }
-
-    console.log("Final total difference for friend: " + totalDifference);
 
     return totalDifference;
 };
