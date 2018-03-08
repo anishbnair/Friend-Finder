@@ -3,7 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <!-- Bootstrap CSS-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
@@ -192,7 +193,7 @@
 
                     <div class="modal-header">
                         <h2 class="modal-title" align="center">
-                            <strong>Your Friend Match</strong>
+                            <strong>Your Best Friend Match</strong>
                         </h2>
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                     </div>
@@ -251,7 +252,7 @@
                     $("#matchName").text(data.name);
                     $("#matchImg").attr("src", data.photo);
                     $("#matchImg").attr("width", "300px");
-                    $("#matchImg").attr("height", "200px");
+                    $("#matchImg").attr("height", "300px");
                     // Displays the best match on a modal
                     $("#resultsModal").modal("toggle");
                 });
